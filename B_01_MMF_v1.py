@@ -29,26 +29,16 @@ def string_check(question, valid_answers=('yes', 'no'),
 
 
 def instructions():
+    print()
     make_statement(statement="Instructions", decoration="ℹ️")
 
-    # Initialise ticket numbers
-    MAX_TICKETS = 5
-    tickets_sold = 0
+    print("""
+    This is the first instruction. 
+    And the second instructions. 
 
-    while tickets_sold < MAX_TICKETS:
-        name = input("Name: ")
+    So now you can use the program. 
 
-        # if name is exit code, break out of loop
-        if name == "xxx":
-            break
-
-        tickets_sold += 1
-
-    if tickets_sold == MAX_TICKETS:
-        print(f"You have sold all the tickets (ie: {MAX_TICKETS} tickets")
-    else:
-        print(f"You have sold {tickets_sold} / {MAX_TICKETS} tickets.")
-
+    """)
 
 def not_blank(question):
     """Checks that a user response is not blank"""
@@ -127,9 +117,8 @@ while tickets_sold < MAX_TICKETS:
     print(f"{name} has bought a ticket ({pay_method})\n")
     tickets_sold += 1
 
-tickets_sold += 1
-
 if tickets_sold == MAX_TICKETS:
     print(f"You have sold all the tickets (ie: {MAX_TICKETS} tickets")
 else:
     print(f"You have sold {tickets_sold} / {MAX_TICKETS} tickets.")
+
